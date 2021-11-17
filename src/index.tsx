@@ -8,7 +8,7 @@ import {configureStore} from "./redux/configureStore";
 import {Provider} from "react-redux";
 
 //logging in with http cookies
-axios.defaults.baseURL = 'https://www.bantucode.org/api/ambassador';
+axios.defaults.baseURL = 'https://www.bantucode.org/api/ambassador/';
 axios.defaults.withCredentials = true;
 
 const store = configureStore()

@@ -16,8 +16,8 @@ const Nav = (props: any) => {
     if (props.user?.id) {
         menu = (
             <div className="col-md-3 text-end">
-                <Link to={'/rankings'} className="btn me-2">Rankings</Link>
-                <Link to={'/stats'} className="btn me-2">Stats</Link>
+                {/* <Link to={'/rankings'} className="btn me-2">Rankings</Link> */}
+                <Link to={'/stats'} className="btn me-2">Projects Created</Link>
                 <a href="#" className="btn btn-outline-primary me-2"
                    onClick={logout}
                 >Logout</a>
@@ -41,12 +41,12 @@ const Nav = (props: any) => {
                 <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
                     <li>
                         <NavLink to='/' activeClassName='link-dark' exact
-                                 className="nav-link px-2 link-secondary">Frontend</NavLink>
+                                 className="nav-link px-2 link-secondary">Project Designer</NavLink>
                     </li>
-                    <li>
+                    {/* <li>
                         <NavLink to={'/backend'} activeClassName='link-dark'
                                  className="nav-link px-2 link-secondary ">Backend</NavLink>
-                    </li>
+                    </li> */}
                 </ul>
 
                 {menu}

@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import Layout from "../components/Layout";
+import { Link } from 'react-router-dom';
 
 const Stats = () => {
     const [stats, setStats] = useState([]);
@@ -14,7 +15,11 @@ const Stats = () => {
             }
         )();
     }, []);
+
+    
     return (
+
+        
         <Layout>
             <div className="table-responsive">
                 <table className="table table-striped table-sm">
@@ -22,16 +27,22 @@ const Stats = () => {
                     <tr>
                         <th>#</th>
                         <th>Name</th>
-                        <th>Revenue</th>
+                        {/* <th>Revenue</th> */}
                     </tr>
                     </thead>
+
+                    
                     <tbody>
-                    {stats.map((s: { code: string, revenue: number }, index) => {
+                        
+                        
+                    {stats.map((s: { code: string }, index) => {
                         return (
                             <tr key={index}>
-                                <td>{`http://localhost:5000/${s.code}`}</td>
+                                <td>{
+                                    
+                                `Project Code/${s.code}`}</td>
                                 <td>{s.code}</td>
-                                <td>{s.revenue}</td>
+                                {/* <td>{s.revenue}</td> */}
                             </tr>
                         )
                     })}

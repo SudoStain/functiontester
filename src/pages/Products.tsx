@@ -57,7 +57,7 @@ const Products = (props: {
             setNotify({
                 show: true,
                 error: false,
-                message: `Link generated: http://localhost:5000/${data.code}`
+                message: `Project Created, Proceed to Checkout: http://localhost:5000/${data.code}`
             });
         } catch (e) {
             setNotify({
@@ -91,7 +91,7 @@ const Products = (props: {
     if (selected.length > 0) {
         generateButton = (
             <div className="input-group-append">
-                <button className="btn btn-info" onClick={generate}>Generate Link</button>
+                <button className="btn btn-info" onClick={generate}>Create Project</button>
             </div>
         )
     }

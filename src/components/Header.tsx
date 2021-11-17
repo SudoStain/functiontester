@@ -9,11 +9,11 @@ const Header = (props: { user: User }) => {
 
     useEffect(() => {
         if (props.user?.id) {
-            setTitle(`$${props.user.revenue}`);
-            setDescription('You have earned this far');
+            setTitle('Create a Project by selecting parameters');
+            setDescription('Something about Projects');
         } else {
             setTitle('Welcome');
-            setDescription('Share links to earn money');
+            setDescription('Please Login To Create A Project');
         }
     }, [props.user]);
 
